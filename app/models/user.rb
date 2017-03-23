@@ -1,4 +1,3 @@
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
 
@@ -8,4 +7,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :groups
+  has_many :posts
 end
