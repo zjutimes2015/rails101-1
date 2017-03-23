@@ -25,7 +25,7 @@ class GroupsController < ApplicationController
     end
   end
 
- private
+
 
  def update
     @group = Group.find(params[:id])
@@ -42,7 +42,8 @@ class GroupsController < ApplicationController
        flash[:alert] = "Group deleted"
        redirect_to groups_path
      end
-
+ private
+ 
  def group_params
    params.require(:group).permit(:title, :description)
  end
